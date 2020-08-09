@@ -1,32 +1,29 @@
 import styled from 'styled-components';
-
-const PrimaryButtonColor = '#030A06';
-const SecondaryButtonColor = '#5AED8E';
-const TertiaryButtonColor = '#4A8C61';
+import { DefaultTheme, TypeScale } from '../utils';
 
 const Button = styled.button`
     padding: 12px 24px;
-    font-size: 1rem;
+    font-size: ${TypeScale.paragraph};
     border-radius: 10px;
     min-width: 100px;
     cursor: pointer;
-    font-family: 'PT Sans', sans-serif;
+    font-family: ${DefaultTheme.fontFamily};
 `
 
 const PrimaryButton = styled(Button)`
-    background-color: ${PrimaryButtonColor};
+    background-color: ${DefaultTheme.primaryColor};
     border: none;
-    color: white;
+    color: ${DefaultTheme.textColorInverted};
 `;
 
 export const SecondaryButton = styled(Button)`
-    background-color: ${SecondaryButtonColor};
+    background-color: #5AED8E;
     border: none;
-    color: white;
+    color: ${DefaultTheme.textColorInverted};
 `;
 
 export const TertiaryButton = styled(Button)`
-    background-color: ${TertiaryButtonColor};
+    background-color: #4A8C61;
     border: none;
     color: white;
 `;
