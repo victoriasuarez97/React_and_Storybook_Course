@@ -5,7 +5,7 @@ export const primary = {
     400: "#4A8C61",
     500: "#497A5B"
   };
-  
+
   export const green = {
     100: "#529e66",
     200: "#367b48",
