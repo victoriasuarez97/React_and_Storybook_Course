@@ -13,6 +13,8 @@ export const DefaultTheme = {
     disabledSecondary: neutral[200],
     disabledTertiary: neutral[100],
     textColorDisabledSecondary: neutral[400],
+    formElementBackground: neutral[100],
+    textOnFormElementBackground: neutral[600],
     status: {
         warningColor: yellow[100],
         warningColorHover: yellow[200],
@@ -33,6 +35,8 @@ export const DarkTheme = {
     primaryFont: PrimaryFont,
     disabled: neutral[400],
     textOnDisabled: neutral[300],
+    formElementBackground: neutral[600],
+    textOnFormElementBackground: neutral[100],
     status: {
       warningColor: yellow[100],
       warningColorHover: yellow[200],

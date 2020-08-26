@@ -24,9 +24,9 @@ const App = () => {
         Default theme
         </button>
             <div style={{ background: useDarkTheme ? DefaultTheme.primaryColor : DarkTheme.primaryColor, width: "100vw", height: "100vh", display: "flex", alignItems: "center", justifyContent: "space-around"}}>
-                <PrimaryButton modifiers={["small", "success"]}>Hello World</PrimaryButton>
-                <SecondaryButton modifiers={["large", "warning"]}>Hello World</SecondaryButton>
-                <TertiaryButton modifiers={["large", "error"]}>Hello World</TertiaryButton>
+                <PrimaryButton modifiers={["small"]}>Hello World</PrimaryButton>
+                <SecondaryButton modifiers={["large"]}>Hello World</SecondaryButton>
+                <TertiaryButton modifiers={["large"]}>Hello World</TertiaryButton>
             </div>
                 <GlobalStyle />
         </ThemeProvider>
