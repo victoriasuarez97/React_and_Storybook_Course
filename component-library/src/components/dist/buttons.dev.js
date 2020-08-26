@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports["default"] = exports.TertiaryButton = exports.SecondaryButton = void 0;
+exports.TertiaryButton = exports.SecondaryButton = exports.PrimaryButton = void 0;
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
@@ -62,50 +62,22 @@ var BUTTON_MODIFIERS = {
   large: function large() {
     return "\n        font-size: ".concat(_utils.TypeScale.paragraph, ";\n        padding: 15px 45px;\n    ");
   },
-  warning: function warning(_ref) {
-    var props = _ref.props;
-    return "\n        background-color: ".concat(props.theme.status.warningColor, ";\n        color: ").concat(props.textColorInverted, ";\n\n        &:hover, &:focus {\n            background-color: ").concat(props.theme.status.warningColorHover, ";\n            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);\n        }\n    ");
+  warning: function warning() {
+    return "\n        background-color: ".concat(_utils.DefaultTheme.status.warningColor, ";\n        color: ").concat(_utils.DefaultTheme.textColorInverted, ";\n\n        &:hover, &:focus {\n            background-color: ").concat(_utils.DefaultTheme.status.warningColorHover, ";\n            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);\n        }\n    ");
   },
-  error: function error(_ref2) {
-    var props = _ref2.props;
-    return "\n        background-color: ".concat(props.theme.status.errorColor, ";\n        color: ").concat(props.theme.textColorInverted, ";\n\n        &:hover, &:focus {\n            background-color: ").concat(props.theme.status.errorColorHover, ";\n            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);\n        }\n    ");
+  error: function error() {
+    return "\n        background-color: ".concat(_utils.DefaultTheme.status.errorColor, ";\n        color: ").concat(_utils.DefaultTheme.textColorInverted, ";\n\n        &:hover, &:focus {\n            background-color: ").concat(_utils.DefaultTheme.status.errorColorHover, ";\n            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);\n        }\n    ");
   },
-  success: function success(_ref3) {
-    var props = _ref3.props;
-    return "\n        background-color: ".concat(props.theme.status.successColor, ";\n        color: ").concat(props.theme.textColorInverted, ";\n\n        &:hover, &:focus {\n            background-color: ").concat(props.theme.status.successColorHover, ";\n            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);\n        }\n    ");
+  success: function success() {
+    return "\n        background-color: ".concat(_utils.DefaultTheme.status.successColor, ";\n        color: ").concat(_utils.DefaultTheme.textColorInverted, ";\n\n        &:hover, &:focus {\n            background-color: ").concat(_utils.DefaultTheme.status.successColorHover, ";\n            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);\n        }\n    ");
   }
 };
 
-var Button = _styledComponents["default"].button(_templateObject(), _utils.TypeScale.paragraph, props.theme.fontFamily);
+var Button = _styledComponents["default"].button(_templateObject(), _utils.TypeScale.paragraph, _utils.DefaultTheme.fontFamily);
 
-var PrimaryButton = (0, _styledComponents["default"])(Button)(_templateObject2(), function (props) {
-  return props.theme.primaryColor;
-}, function (props) {
-  return props.theme.textColorInverted;
-}, function (props) {
-  return props.theme.disabled;
-}, (0, _styledComponentsModifiers.applyStyleModifiers)(BUTTON_MODIFIERS));
-var SecondaryButton = (0, _styledComponents["default"])(Button)(_templateObject3(), function (props) {
-  return props.theme.secondaryColor;
-}, function (props) {
-  return props.theme.textColorInverted;
-}, function (props) {
-  return props.theme.disabledSecondary;
-}, function (props) {
-  return props.theme.textColorDisabledSecondary;
-}, (0, _styledComponentsModifiers.applyStyleModifiers)(BUTTON_MODIFIERS));
+var PrimaryButton = (0, _styledComponents["default"])(Button)(_templateObject2(), _utils.DefaultTheme.primaryColor, _utils.DefaultTheme.textColorInverted, _utils.DefaultTheme.disabled, (0, _styledComponentsModifiers.applyStyleModifiers)(BUTTON_MODIFIERS));
+exports.PrimaryButton = PrimaryButton;
+var SecondaryButton = (0, _styledComponents["default"])(Button)(_templateObject3(), _utils.DefaultTheme.secondaryColor, _utils.DefaultTheme.textColorInverted, _utils.DefaultTheme.disabledSecondary, _utils.DefaultTheme.textColorDisabledSecondary, (0, _styledComponentsModifiers.applyStyleModifiers)(BUTTON_MODIFIERS));
 exports.SecondaryButton = SecondaryButton;
-var TertiaryButton = (0, _styledComponents["default"])(Button)(_templateObject4(), function (props) {
-  return props.theme.tertiaryColor;
-}, function (props) {
-  return props.theme.textColorInverted;
-}, function (props) {
-  return props.theme.disabledTertiary;
-}, function (props) {
-  return props.theme.disabledPrimary;
-}, function (props) {
-  return props.theme.textColorDisabledSecondary;
-}, (0, _styledComponentsModifiers.applyStyleModifiers)(BUTTON_MODIFIERS));
+var TertiaryButton = (0, _styledComponents["default"])(Button)(_templateObject4(), _utils.DefaultTheme.tertiaryColor, _utils.DefaultTheme.textColorInverted, _utils.DefaultTheme.disabledTertiary, _utils.DefaultTheme.disabledPrimary, _utils.DefaultTheme.textColorDisabledSecondary, (0, _styledComponentsModifiers.applyStyleModifiers)(BUTTON_MODIFIERS));
 exports.TertiaryButton = TertiaryButton;
-var _default = PrimaryButton;
-exports["default"] = _default;

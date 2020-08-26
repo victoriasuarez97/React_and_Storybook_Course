@@ -4,7 +4,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _buttons = require("buttons");
+var _buttons = require("buttons.js");
 
 Object.keys(_buttons).forEach(function (key) {
   if (key === "default" || key === "__esModule") return;
@@ -16,7 +16,7 @@ Object.keys(_buttons).forEach(function (key) {
   });
 });
 
-var _modal = require("modal");
+var _modal = require("modal.js");
 
 Object.keys(_modal).forEach(function (key) {
   if (key === "default" || key === "__esModule") return;

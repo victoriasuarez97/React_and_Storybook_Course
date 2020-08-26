@@ -1,2 +1,2 @@
-export * from "buttons";
-export * from "modal";
+export * from 'buttons.js';
+export * from 'modal.js';
