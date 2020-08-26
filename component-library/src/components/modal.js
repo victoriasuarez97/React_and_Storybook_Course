@@ -19,14 +19,15 @@ const ModalWrapper = styled.div `
 `
 const SignUpHeader = styled.h3`
     font-size: ${TypeScale.header3};
-    margin: 105px 100px 40px;
+    margin: 140px 100px 40px;
     float: left;
 `
-const SignUpText = styled.p`
-    margin: 0px 105px;
+const SignUpText = styled.h5`
+    margin: 0px 105px 20px;
     text-align: left;
-    font-size: ${TypeScale.paragraph};
+    font-size: ${TypeScale.header5};
     max-width: 70%;
+    font-weight: lighter;
 `
 const CloseModalIcon = styled.button`
     cursor: pointer;
@@ -44,12 +45,12 @@ export const SignUpModal = () => {
     return (
         <Body>
         <ModalWrapper>
-            <img src={Illustrations.SignUp} style={{ margin: "105px", float: "right" }} alt="Sign up for an account" aria-hidden="true"/>
+            <img src={Illustrations.SignUp} style={{ margin: "105px 105px 0px", float: "right" }} alt="Sign up for an account" aria-hidden="true"/>
             <SignUpHeader>Sign Up</SignUpHeader>
             <br />
             <SignUpText>Sign up today to get access to all of our content and features. </SignUpText>
             <br />
-            <PrimaryButton style={{ width: "20%", margin: "auto", position: "absolute" }}>Submit</PrimaryButton>
+            <PrimaryButton style={{ width: "26%", height: "10%", margin: "30px 73px 20px" }}>Submit</PrimaryButton>
             <CloseModalIcon aria-label="Close Modal">
                 <CloseIcon/>
             </CloseModalIcon>
