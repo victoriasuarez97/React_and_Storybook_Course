@@ -5,11 +5,11 @@ import { Illustrations, CloseIcon } from '../assets';
 import { PrimaryButton } from './buttons';
 
 const Body = styled.body`
-    margin: auto;
+   margin: 70px;
 `
 const ModalWrapper = styled.div `
     text-align: center;
-    margin: 70px;
+    margin: auto;
     width: 912px;
     height: 512px;
     box-shadow: 0 5px 16px rgba(0, 0, 0, 0.2);
@@ -34,7 +34,7 @@ const CloseModalIcon = styled.button`
     background: none;
     border: none;
     position: absolute;
-    right: 410px;
+    right: 260px;
     top: 100px;
     width: 24px;
     height: 24px;
@@ -44,17 +44,17 @@ const CloseModalIcon = styled.button`
 export const SignUpModal = () => {
     return (
         <Body>
-        <ModalWrapper>
-            <img src={Illustrations.SignUp} style={{ margin: "105px 105px 0px", float: "right" }} alt="Sign up for an account" aria-hidden="true"/>
-            <SignUpHeader>Sign Up</SignUpHeader>
-            <br />
-            <SignUpText>Sign up today to get access to all of our content and features. </SignUpText>
-            <br />
-            <PrimaryButton style={{ width: "26%", height: "10%", margin: "30px 73px 20px" }}>Submit</PrimaryButton>
-            <CloseModalIcon aria-label="Close Modal">
-                <CloseIcon/>
-            </CloseModalIcon>
-        </ModalWrapper>
+            <ModalWrapper>
+                <img src={Illustrations.SignUp} style={{ margin: "105px 105px 0px", float: "right" }} alt="Sign up for an account" aria-hidden="true"/>
+                <SignUpHeader>Sign Up</SignUpHeader>
+                <br />
+                <SignUpText>Sign up today to get access to all of our content and features. </SignUpText>
+                <br />
+                <PrimaryButton style={{ width: "26%", height: "10%", margin: "30px 73px 20px" }}>Submit</PrimaryButton>
+                <CloseModalIcon aria-label="Close Modal">
+                    <CloseIcon/>
+                </CloseModalIcon>
+            </ModalWrapper>
         </Body>
     )
 }
