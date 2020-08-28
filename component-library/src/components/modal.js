@@ -45,7 +45,7 @@ const CloseModalIcon = styled.button`
 export const SignUpModal = ({ showModal, setShowModal }) => {
     const animation = useSpring({
         opacity: showModal ? 1 : 0,
-        transform: showModal ? `translateY(0)` : `translateY(-200%)`,
+        transform: showModal ? `translateY(0)` : `translateY(-150%)`,
         config: config.slow
     })
     return (
