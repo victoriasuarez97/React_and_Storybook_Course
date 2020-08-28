@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { useSpring, animated, config } from 'react-spring';
 import { DefaultTheme, TypeScale } from '../utils';
 import { Illustrations, CloseIcon } from '../assets';
 import { PrimaryButton } from './buttons';
@@ -41,9 +42,15 @@ const CloseModalIcon = styled.button`
     padding: 0px;
 `
 
-export const SignUpModal = () => {
+export const SignUpModal = ({ showModal, setShowModal }) => {
+    const animation = useSpring({
+        opacity: showModal ? 1 : 0,
+        transform: showModal ? `translateY(0)` : `translateY(-200%)`,
+        config: config.slow
+    })
     return (
         <Body>
+            <animated.div style={animation}>
             <ModalWrapper>
                 <img src={Illustrations.SignUp} style={{ margin: "105px 105px 0px", float: "right" }} alt="Sign up for an account" aria-hidden="true"/>
                 <SignUpHeader>Sign Up</SignUpHeader>
@@ -55,6 +62,7 @@ export const SignUpModal = () => {
                     <CloseIcon/>
                 </CloseModalIcon>
             </ModalWrapper>
+            </animated.div>
         </Body>
     )
 }
