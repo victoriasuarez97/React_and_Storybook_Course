@@ -20,6 +20,11 @@
     "styled-components": "^5.1.1",
     "styled-components-modifiers": "^1.2.5"
   },
+  "author": "Victoria Suarez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/victoriasuarez97/React_and_Storybook_Course/issues"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
