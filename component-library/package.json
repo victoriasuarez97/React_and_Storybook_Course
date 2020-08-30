@@ -6,6 +6,7 @@
     "@storybook/addon-backgrounds": "^6.0.20",
     "@storybook/addon-contexts": "^5.3.21",
     "@storybook/addon-docs": "^6.0.20",
+    "@storybook/addon-knobs": "^6.0.20",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",

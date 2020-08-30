@@ -4,6 +4,8 @@ var _react = require("@storybook/react");
 
 var _react2 = require("@storybook/addon-contexts/react");
 
+var _addonKnobs = require("@storybook/addon-knobs");
+
 var _contexts = require("./contexts");
 
 (0, _react.addParameters)({
@@ -17,3 +19,4 @@ var _contexts = require("./contexts");
   }]
 });
 (0, _react.addDecorator)((0, _react2.withContexts)(_contexts.contexts));
+(0, _react.addDecorator)(_addonKnobs.withKnobs);
