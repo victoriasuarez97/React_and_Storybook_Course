@@ -10,6 +10,7 @@ module.exports = {
     "@storybook/addon-backgrounds/register",
     "@storybook/addon-contexts/register",
     "@storybook/addon-knobs",
+    "@storybook/addon-a11y/register",
     "@storybook/preset-create-react-app",
     {
       name: "@storybook/addon-docs",

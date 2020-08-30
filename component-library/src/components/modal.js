@@ -5,7 +5,7 @@ import { TypeScale } from '../utils';
 import { Illustrations, CloseIcon } from '../assets';
 import { PrimaryButton } from './buttons';
 
-const ModalWrapper = styled.div `
+export const ModalWrapper = styled.div `
     text-align: center;
     margin: auto;
     width: 912px;
@@ -15,19 +15,19 @@ const ModalWrapper = styled.div `
     color: ${props => props.theme.textOnFormElementBackground};
     border-radius: 2px;
 `
-const SignUpHeader = styled.h3`
+export const SignUpHeader = styled.h3`
     font-size: ${TypeScale.header3};
     margin: 140px 100px 40px;
     float: left;
 `
-const SignUpText = styled.h5`
+export const SignUpText = styled.h5`
     margin: 0px 105px 20px;
     text-align: left;
     font-size: ${TypeScale.header5};
     max-width: 70%;
     font-weight: lighter;
 `
-const CloseModalIcon = styled.button`
+export const CloseModalIcon = styled.button`
     cursor: pointer;
     background: none;
     border: none;
@@ -47,17 +47,17 @@ export const SignUpModal = ({ showModal, setShowModal }) => {
     })
     return (
             <animated.div style={animation}>
-            <ModalWrapper>
-                <img src={Illustrations.SignUp} style={{ margin: "105px 105px 0px", float: "right" }} alt="Sign up for an account" aria-hidden="true"/>
-                <SignUpHeader>Sign Up</SignUpHeader>
-                <br />
-                <SignUpText>Sign up today to get access to all of our content and features. </SignUpText>
-                <br />
-                <PrimaryButton style={{ width: "26%", height: "10%", margin: "30px 73px 20px" }}>Submit</PrimaryButton>
-                <CloseModalIcon aria-label="Close Modal">
-                    <CloseIcon/>
-                </CloseModalIcon>
-            </ModalWrapper>
+                <ModalWrapper>
+                    <img src={Illustrations.SignUp} style={{ margin: "105px 105px 0px", float: "right" }} alt="Sign up for an account" aria-hidden="true"/>
+                    <SignUpHeader>Sign Up</SignUpHeader>
+                    <br />
+                    <SignUpText>Sign up today to get access to all of our content and features. </SignUpText>
+                    <br />
+                    <PrimaryButton style={{ width: "26%", height: "10%", margin: "30px 73px 20px" }}>Submit</PrimaryButton>
+                    <CloseModalIcon aria-label="Close Modal">
+                        <CloseIcon/>
+                    </CloseModalIcon>
+                </ModalWrapper>
             </animated.div>
     )
 }
