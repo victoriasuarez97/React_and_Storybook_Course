@@ -1,21 +1,18 @@
 import React from 'react';
 import styled from 'styled-components';
 import { useSpring, animated, config } from 'react-spring';
-import { DefaultTheme, TypeScale } from '../utils';
+import { TypeScale } from '../utils';
 import { Illustrations, CloseIcon } from '../assets';
 import { PrimaryButton } from './buttons';
 
-const Body = styled.body`
-   margin: 70px;
-`
 const ModalWrapper = styled.div `
     text-align: center;
     margin: auto;
     width: 912px;
     height: 512px;
     box-shadow: 0 5px 16px rgba(0, 0, 0, 0.2);
-    background-color: ${DefaultTheme.formElementBackgroundColor};
-    color: ${DefaultTheme.textOnFormElementBackground};
+    background-color: ${props => props.theme.formElementBackgroundColor};
+    color: ${props => props.theme.textOnFormElementBackground};
     border-radius: 2px;
 `
 const SignUpHeader = styled.h3`
@@ -36,7 +33,7 @@ const CloseModalIcon = styled.button`
     border: none;
     position: absolute;
     right: 260px;
-    top: 100px;
+    top: 30px;
     width: 24px;
     height: 24px;
     padding: 0px;
@@ -49,7 +46,6 @@ export const SignUpModal = ({ showModal, setShowModal }) => {
         config: config.slow
     })
     return (
-        <Body>
             <animated.div style={animation}>
             <ModalWrapper>
                 <img src={Illustrations.SignUp} style={{ margin: "105px 105px 0px", float: "right" }} alt="Sign up for an account" aria-hidden="true"/>
@@ -63,6 +59,5 @@ export const SignUpModal = ({ showModal, setShowModal }) => {
                 </CloseModalIcon>
             </ModalWrapper>
             </animated.div>
-        </Body>
     )
 }

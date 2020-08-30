@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { applyStyleModifiers } from 'styled-components-modifiers';
-import { DefaultTheme, TypeScale } from '../utils';
+import { TypeScale } from '../utils';
 
 const BUTTON_MODIFIERS = {
     small: () => `
@@ -12,30 +12,30 @@ const BUTTON_MODIFIERS = {
         font-size: ${TypeScale.paragraph};
         padding: 15px 45px;
     `,
-    warning: () => `
-        background-color: ${DefaultTheme.status.warningColor};
-        color: ${DefaultTheme.textColorInverted};
+    warning: ({ props }) => `
+        background-color: ${props.theme.status.warningColor};
+        color: ${props.theme.textColorInverted};
 
         &:hover, &:focus {
-            background-color: ${DefaultTheme.status.warningColorHover};
+            background-color: ${props.theme.status.warningColorHover};
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         }
     `,
-    error: () => `
-        background-color: ${DefaultTheme.status.errorColor};
-        color: ${DefaultTheme.textColorInverted};
+    error: ({ props }) => `
+        background-color: ${props.theme.status.errorColor};
+        color: ${props.theme.textColorInverted};
 
         &:hover, &:focus {
-            background-color: ${DefaultTheme.status.errorColorHover};
+            background-color: ${props.theme.status.errorColorHover};
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         }
     `,
-    success: () => `
-        background-color: ${DefaultTheme.status.successColor};
-        color: ${DefaultTheme.textColorInverted};
+    success: ({ props }) => `
+        background-color: ${props.theme.status.successColor};
+        color: ${props.theme.textColorInverted};
 
         &:hover, &:focus {
-            background-color: ${DefaultTheme.status.successColorHover};
+            background-color: ${props.theme.status.successColorHover};
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         }
     `
@@ -47,7 +47,7 @@ const Button = styled.button`
     border-radius: 30px;
     min-width: 100px;
     cursor: pointer;
-    font-family: ${DefaultTheme.fontFamily};
+    font-family: ${props => props.theme.fontFamily};
     transition: background-color 0.2 linear;
 
     &:hover, &:focus {
@@ -56,12 +56,12 @@ const Button = styled.button`
 `;
 
 export const PrimaryButton = styled(Button)`
-    background-color: ${DefaultTheme.primaryColor};
+    background-color: ${props => props.theme.primaryColor};
     border: none;
-    color: ${DefaultTheme.textColorInverted};
+    color: ${props => props.theme.textColorInverted};
 
     &:disabled {
-        background-color: ${DefaultTheme.disabled};
+        background-color: ${props => props.theme.disabledPrimary};
         cursor: not-allowed;
         box-shadow: none;
     }
@@ -70,13 +70,13 @@ export const PrimaryButton = styled(Button)`
 `;
 
 export const SecondaryButton = styled(Button)`
-    background-color: ${DefaultTheme.secondaryColor};
+    background-color: ${props => props.theme.secondaryColor};
     border: none;
-    color: ${DefaultTheme.textColorInverted};
+    color: ${props => props.theme.textColorInverted};
 
     &:disabled {
-        background-color: ${DefaultTheme.disabledSecondary};
-        color: ${DefaultTheme.textColorDisabledSecondary};
+        background-color: ${props => props.theme.disabledSecondary};
+        color: ${props => props.theme.textColorDisabledSecondary};
         cursor: not-allowed;
         box-shadow: none;
     }
@@ -85,14 +85,14 @@ export const SecondaryButton = styled(Button)`
 `;
 
 export const TertiaryButton = styled(Button)`
-    background-color: ${DefaultTheme.tertiaryColor};
+    background-color: ${props => props.theme.tertiaryColor};
     border: none;
-    color: ${DefaultTheme.textColorInverted};
+    color: ${props => props.theme.textColorInverted};
 
     &:disabled {
-        background-color: ${DefaultTheme.disabledTertiary};
-        border: 1px solid ${DefaultTheme.disabledPrimary};
-        color: ${DefaultTheme.textColorDisabledSecondary};
+        background-color: ${props => props.theme.disabledTertiary};
+        border: 1px solid ${props => props.theme.disabledPrimary};
+        color: ${props => props.theme.textColorDisabledSecondary};
         cursor: not-allowed;
         box-shadow: none;
     }
